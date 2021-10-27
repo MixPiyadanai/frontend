@@ -13,7 +13,7 @@ const Login = () => {
             <link rel="stylesheet" href="./dist/css/adminlte.min.css" />
             </div>
         </Head>
-        <body class="hold-transition login-page">
+        <body className="hold-transition login-page">
         <div className="login-box">
         <div className="login-logo">
             <Link href='./'>
