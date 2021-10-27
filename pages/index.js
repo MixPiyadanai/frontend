@@ -18,7 +18,7 @@ const Home = () => {
                             </div>{/* /.col */}
                             <div className="col-sm-6">
                             <ol className="breadcrumb float-sm-right">
-                                <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                <li className="breadcrumb-item"><a href="#">Home Town</a></li>
                             </ol>
                             </div>{/* /.col */}
                         </div>{/* /.row */}
