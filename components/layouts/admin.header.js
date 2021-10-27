@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import Image from 'next/image'
 const AdminHeader = () =>{
     return(
 <nav className="main-header navbar navbar-expand navbar-white navbar-light">
@@ -7,10 +9,24 @@ const AdminHeader = () =>{
       <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="index3.html" className="nav-link">หน้าแรก</a>
+    <Link href="/">
+      <a className="nav-link">หน้าแรก</a>
+    </Link>
     </li>
     <li className="nav-item d-none d-sm-inline-block">
-      <a href="#" className="nav-link">ติดต่อเรา</a>
+    <Link href="/users">
+      <a className="nav-link">รายชื่อสมาชิก</a>
+    </Link>
+    </li>
+    <li className="nav-item d-none d-sm-inline-block">
+    <Link href="/register">
+      <a className="nav-link">สมัครสมาชิก</a>
+    </Link>
+    </li>
+    <li className="nav-item d-none d-sm-inline-block">
+    <Link href="./">
+      <a className="nav-link">ติดต่อเรา</a>
+    </Link>
     </li>
   </ul>
   {/* Right navbar links */}
@@ -46,7 +62,7 @@ const AdminHeader = () =>{
         <a href="#" className="dropdown-item">
           {/* Message Start */}
           <div className="media">
-            <img src="dist/img/user1-128x128.jpg" alt="User Avatar" className="img-size-50 mr-3 img-circle" />
+            <Image src="/dist/img/user1-128x128.jpg" alt="User Avatar" className="img-size-50 mr-3 img-circle" width={128} height={128} />
             <div className="media-body">
               <h3 className="dropdown-item-title">
                 Brad Diesel
@@ -62,7 +78,7 @@ const AdminHeader = () =>{
         <a href="#" className="dropdown-item">
           {/* Message Start */}
           <div className="media">
-            <img src="dist/img/user8-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
+            <Image src="/dist/img/user8-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" width={128} height={128} />
             <div className="media-body">
               <h3 className="dropdown-item-title">
                 John Pierce
@@ -78,7 +94,7 @@ const AdminHeader = () =>{
         <a href="#" className="dropdown-item">
           {/* Message Start */}
           <div className="media">
-            <img src="dist/img/user3-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
+            <Image src="/dist/img/user3-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" width={128} height={128} />
             <div className="media-body">
               <h3 className="dropdown-item-title">
                 Nora Silvester

@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import Image from 'next/image'
+import React from 'react'
+
 const AdminSidebar = () => {
-    return(
+    return (
 <aside className="main-sidebar sidebar-dark-primary elevation-4">
   {/* Brand Logo */}
   <Link href='#'>
   <a className="brand-link">
-    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+    <Image src="/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} width={20} height={20} />
     <span className="brand-text font-weight-light">Admin Panel</span>
   </a>
   </Link>
@@ -14,11 +17,11 @@ const AdminSidebar = () => {
     {/* Sidebar user panel (optional) */}
     <div className="user-panel mt-3 pb-3 mb-3 d-flex">
       <div className="image">
-        <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+        <Image src="/dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" width={50} height={50} />
       </div>
       <div className="info">
       <Link href='#'>
-        <a className="d-block">Mr.Piyadanai</a>
+        <a className="d-block">Mr.Anuchat  Rungsiyanon</a>
       </Link>
       </div>
     </div>
@@ -39,8 +42,8 @@ const AdminSidebar = () => {
         {/* Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library */}
         <li className="nav-item menu-open">
-        <Link href='./'>
-          <a className="nav-link">
+        <Link href='/'>
+          <a className="nav-link active">
             <i className="nav-icon fas fa-tachometer-alt" />
             <p>
               Dashboard
@@ -48,37 +51,26 @@ const AdminSidebar = () => {
           </a>
         </Link>
         </li>
-        <li className="nav-item menu-open">
-          <Link href="./users/">
-            <a className="nav-link">
-              <i className="nav-icon fas fa-user" />
-              <p>
-                จัดการสมาชิก 
-              </p>
-            </a>
+        <li className="nav-item">
+        <Link href='/users'>
+          <a className="nav-link">
+            <i className="nav-icon fas fa-th" />
+            <p>
+              จัดการสมาชิก
+              <span className="right badge badge-danger">New</span>
+            </p>
+          </a>
           </Link>
         </li>
-        
         <li className="nav-item">
         <Link href='#'>
           <a className="nav-link">
-            <i className="nav-icon fas fa-copy" />
+            <i className="nav-icon fas fa-copy text-red" />
             <p>
               ออกจากระบบ
-              <i className="fas fa-angle-left right" />
             </p>
           </a>
         </Link>
-          <ul className="nav nav-treeview">
-            <li className="nav-item">
-            <Link href='./login'>
-              <a className="nav-link">
-                <i className="far fa-circle nav-icon" />
-                <p>Logout</p>
-              </a>
-            </Link>
-            </li>
-            </ul>
           </li>
           </ul>
     </nav>
@@ -86,7 +78,6 @@ const AdminSidebar = () => {
   </div>
   {/* /.sidebar */}
 </aside>
-
     )
 }
 

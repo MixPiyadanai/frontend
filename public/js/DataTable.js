@@ -12,4 +12,8 @@ $(function () {
       "autoWidth": false,
       "responsive": true,
     });
-  });
+});
+
+
+
+

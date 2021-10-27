@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Axios from 'axios';
 import { useState } from 'react'; //เก็บข้อมูลไว้ในตัวแปร state
+import Swal from 'sweetalert2'
 
 const Register = () => {
 
@@ -14,7 +15,7 @@ const [username, setuserName] = useState("");
 const [password, setPassword] = useState("");
 
 const addMember = () => {
-  Axios.post('http://localhost:1337/members', {
+  Axios.post('https://api-itcmtc.herokuapp.com/members', {
       firstname: firstname,
       lastname: lastname,
       username: username,
@@ -44,7 +45,7 @@ const addMember = () => {
 }
     return (
         <div>
-          <body class="hold-transition register-page">
+          <body className="hold-transition register-page">
 <div className="register-box">
   <div className="card">
     <div className="card-body register-card-body">
@@ -95,10 +96,10 @@ const addMember = () => {
         </div>
       </form>
       <div className="social-auth-links text-center">
-      <button type="button" class="btn btn-success" onClick={addMember}>สมัครสมาชิก</button>
+      <button type="button" className="btn btn-success" onClick={addMember}>บันทึก</button>
       <br />
         <Link href="/login">
-      <a className="text-center"><br />ฉันมีบัญชีอยู่แล้ว</a>
+      <a className="text-center">ฉันมีบัญชีอยู่แล้ว</a>
       </Link>
       </div>
     </div>
@@ -106,6 +107,7 @@ const addMember = () => {
   </div>{/* /.card */}
 </div>
 {/* /.register-box */}
+
 </body>
 
         </div>

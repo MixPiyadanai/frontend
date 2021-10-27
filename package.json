@@ -6,23 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "next lint"
+    "lint": "next lint",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.0",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.60",
     "axios": "^0.21.4",
-    "next": "11.0.1",
+    "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sweetalert2": "^11.1.9"
   },
   "devDependencies": {
-    "eslint": "7.30.0",
-    "eslint-config-next": "11.0.1"
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
   },
   "engines": {
-    "node": "17.0.1",
-    "npm": "8.1.0"
+    "npm": "6.14.12",
+    "node": "14.16.1"
   }
 }
